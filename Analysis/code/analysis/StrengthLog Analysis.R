@@ -2,11 +2,9 @@
 if (!require("pacman")) install.packages("pacman"); library(pacman)
 p_load(tidyverse, tntpr, googlesheets, janitor, lubridate)
 
+if (!require("strengthlogr")) devtools::install_github("dpashouwer/strengthlogr", force = TRUE); library(strengthlogr)
+
 strengthlog <- fetch_training_log()
-
-
-
-
 
 
 training_analysis <- function(dat, exercise, num_weeks = 8){
