@@ -4,6 +4,13 @@ if (!require("devtools")) install.packages("devtools"); library(devtools)
 if (!require("strengthlogr")) devtools::install_github("dpashouwer/strengthlogr") ; library(strengthlogr)
 p_load(tidyverse, googlesheets, janitor, lubridate, purrr)
 
+
+
+googlesheets::gs_ls()
+
+strengthlog <- strengthlogr::fetch_training_log()
+
+
 ### Pre-season Power-bias
 
 # Wave 1
